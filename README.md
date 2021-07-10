@@ -7,4 +7,14 @@ I did a similar project related to it (Can be found in my repository) in which i
 
 Coming to the **Technical aspect of Virtual Painter-cum-Writing Board**.
 
-Here four paint brushes are available namely 
+Here three paint brushes are available namely Pink,Blue,Green and eraser.The top UI of my model was designed in Canva.org and are accumulated in Headers folder.
+
+**Process:-**
+Firstly I overlayed the first image in headers over my screen and webcam was continuously captured.For Hand Detection Mediapipe module was used in my project, Mediapipe hand detection is based on finding 21 3D landmarks in our hands I drew all the landmarks on my screen and connected all the landmarks using lines now the lines on connection gave an impression of my hand. Multi-Hand landmark was used for at max 1 hand and all the landmark points were recorded and stored as its of utmost importance for us, also the distances were found between different landmarks and certain criteria was selected for observing whether fingers are up or not (based on distance of tips of fingers).
+
+Detection Confidence was choosen around 0.65 and maxHands was set to 1 in our project case. If two fingers are up then we are in selection mode, then we observe in which portion of top the fingers lie so that that color is choosen and header image is changed in canvas too. For drawing and writing mode only index finger is up and when all fingers are up canvas is cleared. Finally after making some thresholding and binary operations we get our final canvas in which we can scribble and write easily and erase easily too.
+
+**Scope of Improvement:-**
+* It can be deployed in some application as a feature.
+
+Thank you and as always ALL SUGGESTIONS ARE WELCOME !!
